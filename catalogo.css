@@ -1,0 +1,106 @@
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  color: #333;
+  background-color: #121212;
+}
+
+/* Encabezado y barra de navegación */
+header {
+  background-color: #1c1c1c;
+  color: #fff;
+  padding: 1rem;
+}
+
+header nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header nav h1 {
+  font-size: 1.5rem;
+}
+
+header nav ul {
+  list-style-type: none;
+  display: flex;
+  gap: 1rem;
+}
+
+header nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  padding: 0.5rem;
+  transition: color 0.3s;
+}
+
+header nav ul li a:hover {
+  color: #ff9800;
+}
+
+/* Sección del Catálogo */
+.catalog-section {
+  padding: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.catalog-section h2 {
+  font-size: 2rem;
+  color: #fff;
+  margin-bottom: 2rem;
+}
+
+.catalog-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+}
+
+/* Tarjetas de contenido */
+.catalog-item {
+  background-color: #333;
+  border-radius: 5px;
+  overflow: hidden;
+  text-align: center;
+  color: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s;
+}
+
+.catalog-item:hover {
+  transform: scale(1.05);
+}
+
+.catalog-item img {
+  width: 100%;
+  height: auto;
+}
+
+.catalog-item h3 {
+  font-size: 1.2rem;
+  margin: 0.5rem 0;
+  color: #ff9800;
+}
+
+.catalog-item p {
+  padding: 0 1rem 1rem;
+  color: #bbb;
+}
+
+/* Pie de página */
+footer {
+  background-color: #1c1c1c;
+  color: #fff;
+  padding: 1rem;
+  text-align: center;
+  margin-top: 2rem;
+}

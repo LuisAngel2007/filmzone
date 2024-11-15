@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto</title>
+    <link rel="stylesheet" href="contacto.css">
+</head>
+<body>
+    <!-- Encabezado -->
+    <header>
+        <nav>
+            <h1>Contacto</h1>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="catalogo.html">Catálogo</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Sección de Contacto -->
+    <main>
+        <section class="contact-section">
+            <h2>Contáctanos</h2>
+            <p>Si tienes alguna consulta o deseas obtener más información, por favor llena el siguiente formulario o comunícate con nosotros a través de los datos de contacto.</p>
+            
+            <!-- Formulario de Contacto -->
+            <div class="contact-form">
+                <form action="contacto.php" method="POST">
+                    <label for="nombre">Nombre:</label>
+                    <input type="text" id="nombre" name="nombre" required>
+                    
+                    <label for="email">Correo Electrónico:</label>
+                    <input type="email" id="email" name="email" required>
+                                
+                    <label for="mensaje">Mensaje:</label>
+                    <textarea id="comentario" name="comentario" rows="5" required></textarea>
+                    
+                    <button type="submit">Enviar</button>
+                </form>
+            </div>
+            
+            <!-- Información de Contacto -->
+            <div class="contact-info">
+                <h3>Información de Contacto</h3>
+                <p><strong>Dirección:</strong> Calle Ejemplo 123, Ciudad Obregon, Sonora</p>
+                <p><strong>Teléfono:</strong> +54 (644) 122-2199</p>
+                <p><strong>Email:</strong> delacruz.luis.a.cb37@gmail.com</p>
+            </div>
+        </section>
+    </main>
+
+    <!-- Pie de página -->
+    <footer>
+        <p>&copy; 2024 Catálogo de Productos. Todos los derechos reservados.</p>
+    </footer>
+</body>
+</html>

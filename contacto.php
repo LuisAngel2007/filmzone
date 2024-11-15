@@ -6,7 +6,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $comentario = htmlspecialchars($_POST['comentario']);
 
     // Configurar el correo electrónico
-    $destinatario = "delacruz.luis.a.cb37@gmail.com"; // Reemplaza con tu correo electrónico
+    $destinatario = 'delacruz.luis.a.cb37@gmail.com'; // Reemplaza con tu correo electrónico
     $asunto = "Nuevo comentario de $nombre";
     $mensaje = "Has recibido un nuevo comentario.\n\n" .
                "Nombre: $nombre\n" .
@@ -18,15 +18,16 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $encabezados .= "Reply-To: $email\r\n";
     $encabezados .= "Content-Type: text/plain; charset=utf-8\r\n";
 
+        $mail = mail($destinatario, $asunto, $mensaje, $encabezados);
     // Enviar el correo
-    if (mail($destinatario, $asunto, $mensaje, $encabezados)) {
+    if ($mail) {
         echo "Comentario enviado exitosamente. ¡Gracias por tu opinión, $nombre!";
     } else {
         echo "Hubo un error al enviar tu comentario. Por favor, intenta de nuevo.";
     }
 } else {
     // Redirigir al formulario si no se accedió mediante POST
-    header("Location: formulario.php");
+    header("Location: index.html");
     exit;
 }
 ?>
